@@ -1,29 +1,32 @@
+# This project is unmantained!
 # Aerosmith
 
 Aerosmith is a quick and (extremely) dirty python script for posting strava activities to canvas assignments.
 
 ## Installation
+1. Get your api keys from strava and canvas
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+2. Modify the code to point to your class and assignments.
 
-```bash
-pip install foobar
-```
+3. Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the dependencies. [Then add to aws lambda. ](https://aws.amazon.com/premiumsupport/knowledge-center/build-python-lambda-deployment-package/)
 
-## Usage
+4. [Create a role that lets the function access the db.](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_lambda-access-dynamodb.html)
 
-```python
-import foobar
+5. Create a table called `Strava`.
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
+6. Set the environment variables.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
 
+## Roadmap
+This project was a one off. Anyone who wants to use this code as a starter for something more complex or mantain it is welcome to.  
+Features necessary to consider it "complete" not just good enough include (but are not limited to):
+   * User input
+   * Better security
+   * OAuth2 flows
+   * ~~Good~~ less bad deployment to AWS lambda
+   * Multiple users per aws function/db table so users don't have to be technically savvy.
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
