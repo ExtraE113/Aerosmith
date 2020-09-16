@@ -78,7 +78,7 @@ def lambda_handler(event, context):
 
 	print(same_day_and_older)
 
-	out = "<table border='1px solid black'> <tr> <th> type </th> <th> name </th> <th> date </th> <th> duration (min:sec) </th> <th> distance (mi) </th> <th> notes </th> </tr>"
+	out = "<table border='1px solid black'> <tr> <th> type </th> <th> date </th> <th> name </th> <th> duration (min:sec) </th> <th> distance (mi) </th> <th> notes </th> </tr>"
 
 	for i in same_day_and_older:
 		if str(i["id"]) in logged:
